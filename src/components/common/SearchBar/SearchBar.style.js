@@ -28,7 +28,7 @@ export const SInput = styled.input`
   outline: none;
 
   &:focus {
-    width: 30rem;
+    width: 50rem;
     transition: width .6s;
   }
 
