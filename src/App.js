@@ -1,18 +1,20 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Global
-import { Global } from './styles'
+import { GlobalStyle } from './styles'
 // Views
 import { Home } from './views'
 
 function App() {
   return (
-    <Router>
-      <Global />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+      <GlobalStyle />
+    </>
   )
 }
 

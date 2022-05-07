@@ -1,7 +1,5 @@
 import React from 'react'
 import { SH1 } from './Logo.style'
-// colors
-import { COLORS } from '../../../styles'
 
 function Logo() {
   return <SH1>HoumSearch</SH1>

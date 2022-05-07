@@ -1,16 +1,9 @@
 import React from 'react'
 // components
-import {
-  TopBar,
-  LogoIcon
-} from '../../components'
+import { TopBar } from '../../components'
 
 function Home() {
-  return (
-    <TopBar>
-      <LogoIcon/>
-    </TopBar>
-  )
+  return <TopBar />
 }
 
 export default Home
