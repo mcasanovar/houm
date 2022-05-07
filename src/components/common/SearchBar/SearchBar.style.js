@@ -4,9 +4,9 @@ import { COLORS } from '../../../styles'
 
 export const SContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  width: ${(props) => props.width || '100%'};
+  width: auto;
   height: ${(props) => props.height || '3rem'};
   border-style: solid;
   border-width: 0.1rem;
@@ -17,7 +17,7 @@ export const SContainer = styled.div`
 export const SInput = styled.input`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 5rem;
   margin: 0px 20px;
   color: ${COLORS.secondary};
   font-family: 'Fredoka', sans-serif;
@@ -26,4 +26,14 @@ export const SInput = styled.input`
   background-color: ${COLORS.background};
   border-style: none;
   outline: none;
+
+  &:focus {
+    width: 30rem;
+    transition: width .6s;
+  }
+
+  &:not(focus){
+    width: 5rem;
+    transition: width .6s;
+  }
 `

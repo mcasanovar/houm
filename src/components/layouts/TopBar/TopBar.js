@@ -7,7 +7,7 @@ function TopBar() {
   return (
     <SContainer>
       <LogoIcon />
-      <SearchBar />
+      <SearchBar placeholder='Buscar...'/>
     </SContainer>
   )
 }
