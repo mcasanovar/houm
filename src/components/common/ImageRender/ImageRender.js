@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { SContainer, SImage } from './ImageRender.style'
+import notFoundImage from '../../../assets/img/notFoundImage.jpg'
 // hooks
 import { useIntersection } from '../../../hooks'
 
@@ -14,7 +15,10 @@ function ImageRender({ url, alt }) {
 
   return (
     <SContainer ref={imgRef}>
-      {isInView && <SImage src={url} alt={alt}/>}
+      {isInView && <SImage src={url} alt={alt} onError={(e) => {
+        e.currentTarget.onerror = null
+        e.currentTarget.src = notFoundImage
+      }}/>}
     </SContainer>
   )
 }
