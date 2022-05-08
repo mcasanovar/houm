@@ -13,9 +13,11 @@ function Home() {
   const [error, setError] = useState(false)
   const [offset, setOffset] = useState(0)
   const [totalResults, setTotalResults] = useState(0)
+  const [querySearch, setQuerySearch] = useState(undefined)
 
   const handleGetRecipes = async () => {
-    const result = await foodService.getRecipes(offset)
+    console.log('get')
+    const result = await foodService.getRecipes(offset, querySearch)
     if (result.status === OK_PROMISE_RETURN) {
       const mappedRecipes = mapperRecipes(result.data)
       setOffset(result.offset)
@@ -27,13 +29,17 @@ function Home() {
     setError(true)
   }
 
+  // const handleQuerySearch = (value) => {
+  //   return value ? setQuerySearch(value) : setQuerySearch(undefined)
+  // }
+
   useEffect(() => {
     handleGetRecipes()
-  }, [offset])
+  }, [offset, querySearch])
 
   return (
     <>
-      <TopBar />
+      <TopBar onSearch={(value) => setQuerySearch(value)} />
       <SContainerCardList>
         {!error ? (
           <CardList data={[...recipes]} />

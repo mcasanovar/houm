@@ -1,16 +1,22 @@
 import {
   OK_PROMISE_RETURN,
   ERROR_PROMISE_RETURN
+  // ITEMS_PER_PAGE,
+  // API_URL,
+  // API_KEY
 } from '../constants'
 // import { getRequest } from '../utils/axios'
 import fake from '../functions/fakeData.json'
 
-const getRecipes = async (offset) => {
+const getRecipes = async (offset, value) => {
   try {
+    // const query = value ? `query=${value}` : 'query='
+
     // const response = await getRequest(
-    //   `${API_URL}recipes/complexSearch?number=${ITEMS_PER_PAGE}&offset=${offset}&addRecipeInformation=true&apiKey=${API_KEY}`
+    //   `${API_URL}recipes/complexSearch?${query}&number=${ITEMS_PER_PAGE}&offset=${offset}&addRecipeInformation=true&apiKey=${API_KEY}`
     // )
     const response = fake
+    console.log(response)
     // return {
     //   status: OK_PROMISE_RETURN,
     //   data: response.results,
