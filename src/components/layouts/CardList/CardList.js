@@ -14,7 +14,7 @@ import {
   Card,
   ImageRender,
   AdditionalInformation,
-  BookIcon,
+  HeartIcon,
   ClockIcon,
   DolarIcon,
   Button
@@ -40,9 +40,9 @@ function CardList({ data }) {
             {/* AdditionalInformation */}
             <SContainerAdditionalInformation>
               <AdditionalInformation
-                Icon={<BookIcon color={COLORS.darkGray} />}
-                quantity={item.ingredients}
-                text="Ingredients"
+                Icon={<HeartIcon color={COLORS.darkGray} />}
+                quantity={item.likes}
+                text="Likes"
               />
               <AdditionalInformation
                 Icon={<DolarIcon color={COLORS.darkGray} />}
@@ -76,7 +76,7 @@ CardList.propTypes = {
       title: PropTypes.string,
       description: PropTypes.string,
       price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      ingredients: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      likes: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       time: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       image: PropTypes.string
     })

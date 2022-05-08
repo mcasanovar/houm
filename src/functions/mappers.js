@@ -3,9 +3,9 @@ export const mapperRecipes = (recipes) => {
     return {
       id: recipe.id,
       title: recipe.title || '',
-      description: recipe.instructions || '',
+      description: recipe.summary || '',
       price: recipe.pricePerServing || '-- --',
-      ingredients: recipe.extendedIngredients.length || '-- --',
+      likes: recipe.aggregateLikes || '-- --',
       time: recipe.readyInMinutes || '-- --',
       image: recipe.image || ''
     }

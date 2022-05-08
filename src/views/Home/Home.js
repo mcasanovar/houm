@@ -10,13 +10,16 @@ import { mapperRecipes } from '../../functions'
 
 function Home() {
   const [recipes, setRecipes] = useState([])
+  const [error, setError] = useState(false)
 
   const handleGetRecipes = async () => {
     const result = await foodService.getRecipes()
     if (result.status === OK_PROMISE_RETURN) {
       const mappedRecipes = mapperRecipes(result.data)
-      setRecipes(mappedRecipes)
+      return setRecipes(mappedRecipes)
     }
+
+    setError(true)
   }
 
   useEffect(() => {
@@ -27,7 +30,11 @@ function Home() {
     <>
       <TopBar />
       <SContainerCardList>
-        <CardList data={recipes}/>
+        {!error ? (
+          <CardList data={recipes} />
+        ) : (
+          <h1>Ops! ha ocurrido un error</h1>
+        )}
       </SContainerCardList>
     </>
   )
