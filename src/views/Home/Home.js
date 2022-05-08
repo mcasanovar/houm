@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SContainerCardList } from './Home.style'
 import { OK_PROMISE_RETURN, ITEMS_PER_PAGE } from '../../constants'
 // components
-import { TopBar, CardList, Pagination } from '../../components'
+import { CardList, Pagination, TopBar } from '../../components'
 // services
 import { foodService } from '../../services'
 // functions

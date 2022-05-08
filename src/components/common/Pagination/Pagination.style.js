@@ -5,8 +5,16 @@ export const SContainerPagination = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   color: ${COLORS.darkGray};
+  
+  ul {
+    padding-inline-start: 0px;
+  }
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    width: 400px;
+  }
 
   .pagination {
     color: ${COLORS.primary};
@@ -30,7 +38,14 @@ export const SContainerPagination = styled.div`
     border-style: solid;
     border-color: ${COLORS.primary};
     padding: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     cursor: pointer;
+
+    @media (max-width: 560px) {
+      border-right: 1px;
+      border-style: solid;
+    }
   }
 
   .next {
@@ -41,7 +56,14 @@ export const SContainerPagination = styled.div`
     border-color: ${COLORS.primary};
     border-style: solid;
     padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     cursor: pointer;
+
+    @media (max-width: 560px) {
+      border-left: 1px;
+      border-style: solid;
+    }
   }
 
   .page {
@@ -50,6 +72,10 @@ export const SContainerPagination = styled.div`
     border-style: solid;
     padding: 10px;
     cursor: pointer;
+
+    @media (max-width: 560px) {
+      display: none;
+    }
   }
 
   .active {

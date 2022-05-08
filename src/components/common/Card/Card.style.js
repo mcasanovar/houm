@@ -3,9 +3,15 @@ import styled from 'styled-components'
 import { COLORS } from '../../../styles'
 
 export const SContainer = styled.div`
-  width: 25rem;
-  height: 32rem;
+  flex-direction: column;
+  width: 360px;
+  height: 550px;
+  align-self: center;
   background-color: ${COLORS.background};
   box-shadow: 2px 2px 30px 2px #cbcbcb;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
 `

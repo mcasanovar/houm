@@ -32,7 +32,6 @@ function Pagination({ itemsPerPage, items, totalResults, itemOffset, setItemOffs
         pageClassName='page'
         activeClassName='active'
       />
-      <span>{`Total de resultados : ${totalResults}`}</span>
     </SContainerPagination>
   )
 }

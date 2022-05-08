@@ -23,7 +23,7 @@ export const SInput = styled.input`
   font-family: 'Fredoka', sans-serif;
   font-size: medium;
   font-weight: bold;
-  background-color: ${COLORS.background};
+  background-color: ${COLORS.white};
   border-style: none;
   outline: none;
 

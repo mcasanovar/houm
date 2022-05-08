@@ -4,8 +4,8 @@ import { COLORS } from '../../../styles'
 
 export const SContainer = styled.div`
   width: 100%;
-  height: 7rem;
-  background-color: ${COLORS.background};
+  height: 110px;
+  background-color: ${COLORS.white};
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -13,4 +13,8 @@ export const SContainer = styled.div`
   box-shadow: 0px 0px 8px 2px #CBCBCB;
   gap: 12px;
   padding: 30px;
+
+  @media (max-width: 560px) {
+    width: 560px;
+  }
 `

@@ -4,5 +4,6 @@ export const COLORS = {
   secondary: '#263238',
   gray: '#B9B9B9',
   darkGray: '#263238',
-  black: '#000000'
+  black: '#000000',
+  white: '#FFFFFF'
 }
