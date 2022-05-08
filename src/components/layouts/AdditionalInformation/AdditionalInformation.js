@@ -19,7 +19,7 @@ function AdditionalInformation({ Icon, quantity, text }) {
 }
 
 AdditionalInformation.propTypes = {
-  Icon: PropTypes.node,
+  Icon: PropTypes.element,
   quantity: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   text: PropTypes.string
 }

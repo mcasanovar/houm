@@ -46,7 +46,7 @@ function CardList({ data }) {
               />
               <AdditionalInformation
                 Icon={<DolarIcon color={COLORS.darkGray} />}
-                quantity={`${item.price} USD`}
+                quantity={item.price}
                 text="Price"
               />
               <AdditionalInformation

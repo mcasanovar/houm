@@ -8,9 +8,9 @@ axiosClient.defaults.headers = {
 }
 
 export const getRequest = async (URL) => {
-  return axiosClient.get(`/${URL}`).then((response) => response)
+  return axiosClient.get(`${URL}`).then((response) => response)
 }
 
 export const postRequest = async (URL, payload) => {
-  return axiosClient.post(`/${URL}`, payload).then((response) => response)
+  return axiosClient.post(`${URL}`, payload).then((response) => response)
 }
