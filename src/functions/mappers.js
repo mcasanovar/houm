@@ -3,7 +3,7 @@ export const mapperRecipes = (recipes) => {
     return {
       id: recipe.id,
       title: recipe.title || '',
-      description: recipe.summary || '',
+      description: recipe.instructions || '',
       price: recipe.pricePerServing || '-- --',
       ingredients: recipe.extendedIngredients.length || '-- --',
       time: recipe.readyInMinutes || '-- --',

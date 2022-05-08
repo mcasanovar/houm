@@ -1,23 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SearchCircleIcon } from '@heroicons/react/solid'
+import { ClockIcon } from '@heroicons/react/solid'
 // colors
 import { COLORS } from '../../../styles'
 
-function SearchIcon({ width, height, color }) {
-  return <SearchCircleIcon style={{ color, width, height }} />
+function Clock({ color, width, height }) {
+  return <ClockIcon style={{ color, width, height }} />
 }
 
-SearchIcon.propTypes = {
+Clock.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   color: PropTypes.string
 }
 
-SearchIcon.defaultProps = {
+Clock.defaultProps = {
   width: '20px',
   height: '20px',
   color: COLORS.black
 }
 
-export default SearchIcon
+export default Clock
