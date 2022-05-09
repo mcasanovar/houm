@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { SContainer } from './SearchBar.style'
 // components
 import { SearchIcon, Input } from '../../../components'
 // colors
@@ -16,15 +15,13 @@ function SearchBar({ placeholder, onSearch }) {
   }
 
   return (
-    <SContainer>
-      <Input
-        placeholder={placeholder}
-        onChange={(e) => setText(e.target.value)}
-        value={text}
-        onEnter={handleEnterSearch}
-      />
-      <SearchIcon width="45px" height="45px" color={COLORS.darkGray} />
-    </SContainer>
+    <Input
+      placeholder={placeholder}
+      onChange={(e) => setText(e.target.value)}
+      value={text}
+      onEnter={handleEnterSearch}
+      Icon={<SearchIcon width="45px" height="45px" color={COLORS.darkGray} />}
+    />
   )
 }
 

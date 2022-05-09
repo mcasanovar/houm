@@ -2,10 +2,23 @@ import styled from 'styled-components'
 // colors
 import { COLORS } from '../../../styles'
 
+export const SContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
+  height: 45px;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 25px;
+  border-color: ${COLORS.gray};
+  background-color:${COLORS.white};
+`
+
 export const SInput = styled.input`
   display: flex;
   justify-content: center;
-  width: 5rem;
+  width: ${props => props.width || '100px'};
   margin: 0px 20px;
   color: ${COLORS.secondary};
   font-family: 'Fredoka', sans-serif;
@@ -16,12 +29,12 @@ export const SInput = styled.input`
   outline: none;
 
   &:focus {
-    width: 50rem;
+    width: ${props => props.focusWidth || '500px'};
     transition: width 0.6s;
   }
 
   &:not(focus) {
-    width: 5rem;
+    width: ${props => props.width || '100px'};
     transition: width 0.6s;
   }
 `

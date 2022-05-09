@@ -6,8 +6,8 @@ import {
   STitle,
   SContainerAdditionalInformation,
   SContainerDescription,
-  SSpan,
-  SContainerButton
+  SSpan
+  // SContainerButton
 } from './CardList.style'
 // components
 import {
@@ -16,13 +16,13 @@ import {
   AdditionalInformation,
   HeartIcon,
   ClockIcon,
-  DolarIcon,
-  Button
+  DolarIcon
+  // Button
 } from '../../../components'
 import { COLORS } from '../../../styles'
 
 function CardList({ data }) {
-  const { PrimaryButton } = Button
+  // const { PrimaryButton } = Button
 
   return (
     <>
@@ -60,9 +60,9 @@ function CardList({ data }) {
               <SSpan>{item.description}</SSpan>
             </SContainerDescription>
             {/* Button */}
-            <SContainerButton>
+            {/* <SContainerButton>
               <PrimaryButton width='70%'>Details</PrimaryButton>
-            </SContainerButton>
+            </SContainerButton> */}
           </Card>
         ))}
     </>
