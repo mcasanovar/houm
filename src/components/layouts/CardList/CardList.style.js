@@ -51,3 +51,7 @@ export const SContainerButton = styled.div`
   align-items: center;
   margin: 35px 0px 5px 0px;
 `
+
+export const SContainerCuisines = styled.div`
+  padding: 25px;
+`

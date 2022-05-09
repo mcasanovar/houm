@@ -6,7 +6,8 @@ import {
   STitle,
   SContainerAdditionalInformation,
   SContainerDescription,
-  SSpan
+  SSpan,
+  SContainerCuisines
   // SContainerButton
 } from './CardList.style'
 // components
@@ -16,7 +17,8 @@ import {
   AdditionalInformation,
   HeartIcon,
   ClockIcon,
-  DolarIcon
+  DolarIcon,
+  CuisinesTags
   // Button
 } from '../../../components'
 import { COLORS } from '../../../styles'
@@ -59,10 +61,10 @@ function CardList({ data }) {
             <SContainerDescription>
               <SSpan>{item.description}</SSpan>
             </SContainerDescription>
-            {/* Button */}
-            {/* <SContainerButton>
-              <PrimaryButton width='70%'>Details</PrimaryButton>
-            </SContainerButton> */}
+            {/* Cuisines Tags */}
+            <SContainerCuisines>
+              <CuisinesTags />
+            </SContainerCuisines>
           </Card>
         ))}
     </>
