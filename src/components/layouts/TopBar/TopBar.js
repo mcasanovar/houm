@@ -8,7 +8,7 @@ function TopBar({ onSearch }) {
   return (
     <SContainer>
       <LogoIcon />
-      <SearchBar placeholder='Pasta...' onSearch={onSearch}/>
+      <SearchBar placeholder='Search...' onSearch={onSearch}/>
     </SContainer>
   )
 }

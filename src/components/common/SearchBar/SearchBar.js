@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { SContainer, SInput } from './SearchBar.style'
+import { SContainer } from './SearchBar.style'
 // components
-import { SearchIcon } from '../../../components'
+import { SearchIcon, Input } from '../../../components'
 // colors
 import { COLORS } from '../../../styles'
 
@@ -17,11 +17,11 @@ function SearchBar({ placeholder, onSearch }) {
 
   return (
     <SContainer>
-      <SInput
+      <Input
         placeholder={placeholder}
         onChange={(e) => setText(e.target.value)}
         value={text}
-        onKeyDown={handleEnterSearch}
+        onEnter={handleEnterSearch}
       />
       <SearchIcon width="45px" height="45px" color={COLORS.darkGray} />
     </SContainer>
