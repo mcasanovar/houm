@@ -63,7 +63,7 @@ function CardList({ data }) {
             </SContainerDescription>
             {/* Cuisines Tags */}
             <SContainerCuisines>
-              <CuisinesTags />
+              <CuisinesTags tags={item.cuisines}/>
             </SContainerCuisines>
           </Card>
         ))}
@@ -80,7 +80,8 @@ CardList.propTypes = {
       price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       likes: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       time: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      image: PropTypes.string
+      image: PropTypes.string,
+      cuisines: PropTypes.arrayOf(PropTypes.string)
     })
   )
 }

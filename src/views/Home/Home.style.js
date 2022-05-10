@@ -10,11 +10,15 @@ export const SMainContainer = styled.div`
 
 export const SContainerCardList = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-items: center;
   padding: 20px;
+
+  @media (max-width: 1800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   @media (max-width: 1700px) {
     grid-template-columns: repeat(3, 1fr);

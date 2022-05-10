@@ -12,13 +12,13 @@ export const SContainer = styled.div`
   border-width: 0.1rem;
   border-radius: 25px;
   border-color: ${COLORS.gray};
-  background-color:${COLORS.white};
+  background-color: ${COLORS.white};
 `
 
 export const SInput = styled.input`
   display: flex;
   justify-content: center;
-  width: ${props => props.width || '100px'};
+  width: ${(props) => props.width || '100px'};
   margin: 0px 20px;
   color: ${COLORS.secondary};
   font-family: 'Fredoka', sans-serif;
@@ -29,12 +29,20 @@ export const SInput = styled.input`
   outline: none;
 
   &:focus {
-    width: ${props => props.focusWidth || '500px'};
-    transition: width 0.6s;
+    @media (min-width: 510px) {
+      width: ${(props) => props.focusWidth || '600px'};
+      transition: width 0.6s;
+    }
+
+    @media (max-width: 510px) {
+      width: ${(props) => props.focusWidth || '220px'};
+      transition: width 0.6s;
+    }
+
   }
 
   &:not(focus) {
-    width: ${props => props.width || '100px'};
+    width: ${(props) => props.width || '100px'};
     transition: width 0.6s;
   }
 `

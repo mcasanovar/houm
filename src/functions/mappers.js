@@ -7,7 +7,8 @@ export const mapperRecipes = (recipes) => {
       price: recipe.pricePerServing || '-- --',
       likes: recipe.aggregateLikes || '-- --',
       time: recipe.readyInMinutes || '-- --',
-      image: recipe.image || ''
+      image: recipe.image || '',
+      cuisines: recipe.cuisines || []
     }
   })
 
