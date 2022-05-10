@@ -9,7 +9,7 @@ export const SContainer = styled.div`
   align-self: center;
   background-color: ${COLORS.background};
   box-shadow: 2px 2px 30px 2px #cbcbcb;
-  border-radius: 0.5rem;
+  border-radius: 15px;
 
   @media (min-width: 1200px) {
     width: 400px;

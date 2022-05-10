@@ -3,11 +3,22 @@ import {
   SContainerCardList,
   SContainerFilters,
   SFiltersTitle,
-  SContainerPagination
+  SContainerPagination,
+  SContainerNotFound,
+  SContainerFilterButton,
+  SContainerSearchBar
 } from './Home.style'
 import { OK_PROMISE_RETURN, ITEMS_PER_PAGE } from '../../constants'
 // components
-import { CardList, Pagination, TopBar, Filter, Button } from '../../components'
+import {
+  CardList,
+  Pagination,
+  TopBar,
+  Filter,
+  Button,
+  Skeleton,
+  SearchBar
+} from '../../components'
 // services
 import { foodService } from '../../services'
 // functions
@@ -21,11 +32,13 @@ function Home() {
   const [querySearch, setQuerySearch] = useState('')
   const [caloriesSearch, setCaloriesSearch] = useState('')
   const [cuisinesSearch, setCuisinesSearch] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const { PrimaryButton } = Button
+  const { CardSkeleton } = Skeleton
 
   const handleGetRecipes = async () => {
-    console.log('searching')
+    setLoading(true)
     const result = await foodService.getRecipes(
       offset,
       querySearch,
@@ -37,6 +50,7 @@ function Home() {
       setOffset(result.offset)
       setTotalResults(result.totalResults)
       setRecipes(mappedRecipes)
+      setLoading(false)
       return
     }
 
@@ -54,6 +68,9 @@ function Home() {
       {/* Groups of filters */}
       <SFiltersTitle>Filters</SFiltersTitle>
       <SContainerFilters>
+        <SContainerSearchBar>
+          <SearchBar placeholder="search..." width='auto' focusWidth='auto'/>
+        </SContainerSearchBar>
         <Filter
           title="Max of Calories"
           exampleText="Ej: 100..."
@@ -68,18 +85,37 @@ function Home() {
           onChange={(e) => setCuisinesSearch(e.target.value)}
           value={cuisinesSearch}
         />
-        <PrimaryButton width="400px" height="50px" onClick={() => handleGetRecipes()}>
-          APPLY FILTER
-        </PrimaryButton>
+        <SContainerFilterButton>
+          <PrimaryButton
+            width="360px"
+            height="50px"
+            onClick={() => handleGetRecipes()}
+          >
+            APPLY FILTER
+          </PrimaryButton>
+        </SContainerFilterButton>
       </SContainerFilters>
       {/* List of cards */}
       <SContainerCardList>
-        {!error ? (
-          <CardList data={[...recipes]} />
-        ) : (
-          <h1>Ops! ha ocurrido un error</h1>
+        {loading && (
+          <>
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </>
         )}
+        {!error && !loading && <CardList data={[...recipes]} />}
       </SContainerCardList>
+      {!error && !totalResults && !loading && (
+        <SContainerNotFound>
+          <h1>No se encontraron resultados</h1>
+        </SContainerNotFound>
+      )}
+      {error && (
+        <SContainerNotFound>
+          <h1>Ops! ha ocurrido un error</h1>
+        </SContainerNotFound>
+      )}
       {/* Paginations */}
       <SContainerPagination>
         <Pagination

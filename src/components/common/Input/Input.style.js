@@ -35,8 +35,9 @@ export const SInput = styled.input`
     }
 
     @media (max-width: 510px) {
-      width: ${(props) => props.focusWidth || '220px'};
+      width: ${(props) => props.focusWidth || '100px'};
       transition: width 0.6s;
+      /* width: fit-content; */
     }
 
   }

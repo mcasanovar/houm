@@ -39,11 +39,13 @@ export const SContainerFilters = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  padding: 0px 40px;
-  grid-column-gap: 20px;
+  width: 100%;
+  grid-row-gap: 20px;
+  /* padding: 0px 40px; */
+  /* grid-column-gap: 20px;
   grid-row-gap: 20px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
 
   @media (max-width: 1700px) {
     grid-template-columns: repeat(3, 1fr);
@@ -67,4 +69,28 @@ export const SFiltersTitle = styled.h2`
 export const SContainerPagination = styled.div`
   display: flex;
   justify-content: center;
+`
+
+export const SContainerNotFound = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
+export const SContainerFilterButton = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 875px) {
+    width: 350px;
+  }
+`
+
+export const SContainerSearchBar = styled.div`
+  width: auto;
+
+  @media (min-width: 560px) {
+    display: none;
+  }
 `

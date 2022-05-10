@@ -12,9 +12,16 @@ export const SContainer = styled.div`
   align-items: center;
   box-shadow: 0px 0px 8px 2px #CBCBCB;
   gap: 12px;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 
   @media (max-width: 560px) {
-    width: 560px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+    display: none;
   }
 `

@@ -6,7 +6,7 @@ export const SContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: ${(props) => props.width || 'auto'};
-  height: ${(props) => props.height || '40px'};
+  height: ${(props) => props.height || '25px'};
   border-radius: 20px;
   background-color: ${props => props.background || COLORS.darkGray};
   border-style: none;

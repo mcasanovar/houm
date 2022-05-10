@@ -2,8 +2,13 @@ import { createGlobalStyle } from 'styled-components'
 import { COLORS } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
-  * {
+  /* * {
     box-sizing: border-box;
+  } */
+
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {

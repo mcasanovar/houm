@@ -13,7 +13,7 @@ export const SContainerTitle = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 0px 25px;
-  width: 100%;
+  width: auto;
   height: 4rem;
   box-shadow: 0px 0px 12px 1px #cbcbcb;
 `
