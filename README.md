@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# FoodSearch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FoodSearch es una página de búsqueda de recetas de la cual muestra lo popular de ella, su precio y su tiempo de preparación
 
-## Available Scripts
+## Instalación
 
-In the project directory, you can run:
+1.- Descargar el proyecto desde el link de github facilitado al usuario final
 
-### `npm start`
+2.- Agregar el archivo .env facilitado al usuario final, el cual contiene las variables de entorno para el correcto funcionamiento del sistema
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.- Ejecutar el comando npm install / yarn para descargar las dependencias
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Desarrollo
 
-### `npm test`
+Este sistema está desarrollado en React.js.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se usó styled-components para la agregación de CSS al sistema, por lo que cada componente contiene su referido de css en al misma carpeta utilizando el prefijo 'S' como referencia al componente estilizado
 
-### `npm run build`
+Tambien se generó un mapper en la carpeta functions para transformar la información obtenida por el endpoint, a información utilizada por el sistema
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Con styled-components se estilizó de forma global los parametros básicos de diseño agregado en el archivo /styles/global.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+En el archivo /styles/colors se encuentran los colores globales utilizados en el sistema
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se utilizó axios para el fetch de datos
 
-### `npm run eject`
+Se utilizó un customHook para la intersepción del DOM para lograr un lazyLoad al cargar las imagenes de las card
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Se utilizó solamente mediaQuery para agregar responsive al sistema
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Se creó una carpeta llamada layout dentro de component, la cual tiene la finalidad de juntar varios componente para armar un pequeño diseño funcional (simulando celula y molecula) ref: https://www.uifrommars.com/atomic-design-ventajas/
