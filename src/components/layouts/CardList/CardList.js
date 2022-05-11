@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { fadeIn } from 'react-animations'
 import {
   SContainerImage,
   SContainerTitle,
@@ -30,7 +31,7 @@ function CardList({ data }) {
     <>
       {!!data.length &&
         data.map((item) => (
-          <Card key={item.id}>
+          <Card key={item.id} animationType={fadeIn}>
             {/* Image */}
             <SContainerImage>
               <ImageRender url={item.image} alt={item.title} />
