@@ -69,7 +69,7 @@ function Home() {
       <SFiltersTitle>Filters</SFiltersTitle>
       <SContainerFilters>
         <SContainerSearchBar>
-          <SearchBar placeholder="search..." width='auto' focusWidth='auto'/>
+          <SearchBar placeholder="search..." width='auto' focusWidth='auto' onSearch={(value) => setQuerySearch(value)}/>
         </SContainerSearchBar>
         <Filter
           title="Max of Calories"
